@@ -18,7 +18,7 @@ from pyspark.sql.types import StringType, IntegerType, FloatType, DateType
 def process_bronze_table(snapshot_date_str, bronze_lms_directory, spark):
     # prepare arguments
     snapshot_date = datetime.strptime(snapshot_date_str, "%Y-%m-%d")
-    
+
     # connect to source back end - IRL connect to back end source system
     csv_file_path = "data/lms_loan_daily.csv"
 
@@ -33,3 +33,4 @@ def process_bronze_table(snapshot_date_str, bronze_lms_directory, spark):
     print('saved to:', filepath)
 
     return df
+
