@@ -96,7 +96,7 @@ def process_features_gold_table(snapshot_date_str, silver_attributes_directory, 
         df = df.join(df_clickstream_agg, on="Customer_ID", how="left")
         df = df.join(df_clickstream_latest, on="Customer_ID", how="left")
  
-        #  # feature 5: has_clickstream flag - distinguishes "no history" from "zero activity"
+        # feature 5: has_clickstream flag - distinguishes "no history" from "zero activity"
         df = df.withColumn("has_clickstream", F.when(col("fe_1_mean").isNotNull(), 1).otherwise(0).cast(IntegerType()))
     else:
         df = df.withColumn("has_clickstream", F.lit(0).cast(IntegerType()))
