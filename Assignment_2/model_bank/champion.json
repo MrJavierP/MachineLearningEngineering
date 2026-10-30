@@ -1,0 +1,53 @@
+{
+ "model_name": "credit_model_xgboost_2024_09_01.pkl",
+ "selected_on": "2024-09-01",
+ "selected_at": "2026-10-30 15:12:11",
+ "rule": "highest OOT AUC among candidates with train-test AUC gap <= 0.10; ties broken by test AUC",
+ "champion": {
+  "model_name": "credit_model_xgboost_2024_09_01.pkl",
+  "auc_train": 0.9501,
+  "auc_test": 0.8903,
+  "auc_oot": 0.9281,
+  "gini_oot": 0.856,
+  "overfit_gap": 0.0597,
+  "hp_params": {
+   "subsample": 0.8,
+   "n_estimators": 400,
+   "max_depth": 3,
+   "learning_rate": 0.03,
+   "colsample_bytree": 1.0
+  }
+ },
+ "candidates": [
+  {
+   "model_name": "credit_model_lightgbm_2024_09_01.pkl",
+   "auc_train": 0.9694,
+   "auc_test": 0.883,
+   "auc_oot": 0.9269,
+   "gini_oot": 0.854,
+   "overfit_gap": 0.0864,
+   "hp_params": {
+    "subsample": 1.0,
+    "num_leaves": 31,
+    "n_estimators": 200,
+    "max_depth": 3,
+    "learning_rate": 0.1
+   }
+  },
+  {
+   "model_name": "credit_model_xgboost_2024_09_01.pkl",
+   "auc_train": 0.9501,
+   "auc_test": 0.8903,
+   "auc_oot": 0.9281,
+   "gini_oot": 0.856,
+   "overfit_gap": 0.0597,
+   "hp_params": {
+    "subsample": 0.8,
+    "n_estimators": 400,
+    "max_depth": 3,
+    "learning_rate": 0.03,
+    "colsample_bytree": 1.0
+   }
+  }
+ ]
+}
